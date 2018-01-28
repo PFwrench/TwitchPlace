@@ -25,10 +25,10 @@ app.use(express.static('../Place'))
 
 app.get('/health-check', (req, res) => res.sendStatus(200));
 
-let options = {
-   key  : fs.readFileSync('/boilerplate/certs/testing.key'),
-   cert : fs.readFileSync('/boilerplate/certs/testing.crt')
-};
+// let options = {
+//    key  : fs.readFileSync('/boilerplate/certs/testing.key'),
+//    cert : fs.readFileSync('/boilerplate/certs/testing.crt')
+// };
 
 app.listen(8080);
 
