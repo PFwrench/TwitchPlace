@@ -23,12 +23,16 @@ app.use((req, res, next) => {
 
 app.use(express.static('../Place'))
 
+app.get('/health-check', (req, res) => res.sendStatus(200));
+
 let options = {
    key  : fs.readFileSync('/boilerplate/certs/testing.key'),
    cert : fs.readFileSync('/boilerplate/certs/testing.crt')
 };
 
-const PORT = 8080;
-https.createServer(options, app).listen(PORT, function () {
-  console.log('Extension Boilerplate service running on https', PORT);
-});
+app.listen(8080);
+
+// const PORT = 8080;
+// https.createServer(options, app).listen(PORT, function () {
+//   console.log('Extension Boilerplate service running on https', PORT);
+// });
