@@ -6,12 +6,12 @@ openssl req \
   -days 1001 \
   -nodes \
   -x509 \
+  -subj "/C=US/ST=California/L=San Francisco/O=Twitch/OU=web/CN=localhost" \
   -extensions SAN \
   -config <( cat $( [[ "Darwin" = "$(uname -s)" ]]  && echo /System/Library/OpenSSL/openssl.cnf || echo /etc/ssl/openssl.cnf  ) \
     <(printf "[SAN]\nsubjectAltName='DNS:localhost'")) \
   -keyout "${NAME}.key" \
   -out "${NAME}.crt" \
-  -requexts SAN \
   -extensions SAN \
   -sha256 \
 
