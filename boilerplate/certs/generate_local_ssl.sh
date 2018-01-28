@@ -2,16 +2,20 @@
 NAME=${1:-testing}
 
 openssl req \
-  -newkey rsa:4096 \
+  -newkey rsa:2048 \
   -days 1001 \
   -nodes \
   -x509 \
+  -new
   -subj "/C=US/ST=California/L=San Francisco/O=Twitch/OU=web/CN=localhost" \
   -extensions SAN \
   -config <( cat $( [[ "Darwin" = "$(uname -s)" ]]  && echo /System/Library/OpenSSL/openssl.cnf || echo /etc/ssl/openssl.cnf  ) \
     <(printf "[SAN]\nsubjectAltName='DNS:localhost'")) \
   -keyout "${NAME}.key" \
-  -out "${NAME}.crt"
+  -out "${NAME}.crt" \
+  -requexts SAN \
+  -extensions SAN \
+  -sha256 \
 
 echo ""
 echo "Generated $NAME.key and $NAME.crt files in local directory"

@@ -1,0 +1,31 @@
+/**
+ * This file is for linking the sticker assets to the DOM.
+ *
+ * To add more/change stickers, a class must be made for each sticker and the classname must be
+ * added to the stickers array in stickers.js.
+ */
+
+.img-america {
+  background-repeat: no-repeat;
+  background-image: url('../img/stickers/America_Heart.png');
+}
+
+.img-cupid {
+  background-repeat: no-repeat;
+  background-image: url('../img/stickers/Cupid.png');
+}
+
+.img-emoji {
+  background-repeat: no-repeat;
+  background-image: url('../img/stickers/emoji2.png');
+}
+
+.img-hey {
+  background-repeat: no-repeat;
+  background-image: url('../img/stickers/hey2.png');
+}
+
+.img-kappa {
+  background-repeat: no-repeat;
+  background-image: url('../img/stickers/Kappa.png');
+}

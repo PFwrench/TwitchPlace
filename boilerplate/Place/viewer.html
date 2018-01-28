@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/viewer.css">
+  <link rel="stylesheet" href="css/stickers.css">
+  <script src="muxyextensionssdk/dist/muxy-extensions.js"></script>
+  <script src="js/draggable.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div id="title"> Twitch Place</div>
+    <div id="complete">
+      <a id="purchase" href="#"> Place tile -></a>
+    </div>
+  </div>
+  <div class="book">
+    <div class="background"></div>
+    <div id="shader"></div>
+    <div class="grid"></div>
+  </div>
+  <div class="picker">
+    <div class="carousel">
+      <div class="button" id="button-left">
+        <div class="button-left-icon"></div>
+      </div>
+      <div class="stickers" id="stickers">
+        <div class="sticker"></div>
+        <div class="sticker"></div>
+        <div class="sticker"></div>
+        <div class="sticker"></div>
+      </div>
+      <div class="button" id="button-right">
+        <div class="button-right-icon"></div>
+      </div>
+    </div>
+    <div class="stickers-label">
+      <div> Drag and drop tiles </div>
+    </div>
+  </div>
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/viewer.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/commerce.js"></script>
+  <script src="js/stickers.js"></script>
+</body>
+
+</html>

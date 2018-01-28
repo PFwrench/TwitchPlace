@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   return next();
 });
 
-app.use(express.static('../frontend'))
+app.use(express.static('../simple'))
 
 let options = {
    key  : fs.readFileSync('/boilerplate/certs/testing.key'),
